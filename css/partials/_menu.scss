@@ -77,23 +77,18 @@ header {
 .nav-social {
   display: flex;
 
-  svg {
-    cursor: pointer;
-
+  a {
+    display: flex;
+    align-items: center;
     margin-left: 16px;
-    width: 24px;
-
-    path,
-    circle {
-      transition: 0.7s ease;
-    }
+    color: $gray-3;
+    font-size: 24px;
+    line-height: 1;
+    transition: 0.7s ease;
 
     &:hover {
-      path,
-      circle {
-        fill: $red-light;
-        transform: translate3d(0, -3px, 0);
-      }
+      color: $red-light;
+      transform: translate3d(0, -3px, 0);
     }
   }
 

@@ -12,6 +12,13 @@
       href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44WAW+LHfLzZ9ycC1YGS4kVf0B90pnoKc8Zm71UqJWO4+3P3UkNHt3Nv6t48crvzaqT1zRi7w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!-- LOADING -->
@@ -45,20 +52,46 @@
       <nav class="navbar">
         <div class="nav-menu">
           <div class="logo">
-            <img src="svg/logo-spiderman.svg" onload="SVGInject(this)" />
+            <a href="https://devomb.com" aria-label="Devom Brahmbhatt">
+              <img src="svg/logo-spiderman.svg" onload="SVGInject(this)" />
+            </a>
           </div>
           <ul class="nav-list">
             <li><a href="" class="nav-link">Home</a></li>
-            <li><a href="" class="nav-link">Store</a></li>
+            <li>
+              <a
+                href="https://www.playstation.com/en-us/games/marvels-spider-man-miles-morales/"
+                class="nav-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Store
+              </a>
+            </li>
             <li><a href="" class="nav-link">Wallpapers</a></li>
             <li><a href="" class="nav-link">#BeYourself</a></li>
           </ul>
         </div>
         <div class="nav-social">
-          <img src="svg/icon-facebook.svg" onload="SVGInject(this)" />
-          <img src="svg/icon-instagram.svg" onload="SVGInject(this)" />
-          <img src="svg/icon-youtube.svg" onload="SVGInject(this)" />
-          <img src="svg/icon-twitter.svg" onload="SVGInject(this)" />
+          <a
+            href="https://github.com/DevomB"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/devomb"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+          </a>
+          <a href="#" aria-label="Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          </a>
         </div>
         <input id="hamburguer" type="checkbox" style="display: none;" />
         <label class="hamburguer-label" for="hamburguer"><div class="hamburguer mr-1"></div></label>
@@ -80,15 +113,23 @@
         <div>
           <img src="img/spiderman-text.png" onload="SVGInject(this)" />
         </div>
-        <p class="my-2 item-2">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis velit
-          magna vitae mauris orci fames posuere nibh. Sit tellus amet facilisi
-          sit odio pulvinar scelerisque quam et. Ultrices facilisis nunc massa
-          diam, quis mi imperdiet.
-        </p>
         <div class="item-3">
-          <a href="" class="btn">Pre-order now</a>
-          <a href="" class="btn-secondary ml-2">Watch the teaser</a>
+          <a
+            href="https://www.playstation.com/en-us/games/marvels-spider-man-miles-morales/"
+            class="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Buy now
+          </a>
+          <a
+            href="https://www.youtube.com/watch?v=RTwW12d6tEc"
+            class="btn-secondary ml-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Watch trailer
+          </a>
         </div>
         <div class="flex align-items-center mt-2 item-4">
           <img src="svg/ps.svg" class="w-auto" onload="SVGInject(this)" />

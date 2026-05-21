@@ -333,21 +333,23 @@ header {
   display: flex;
 }
 
-.nav-social svg {
-  cursor: pointer;
+.nav-social a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 16px;
-  width: 24px;
-}
-
-.nav-social svg path,
-.nav-social svg circle {
+  color: #959698;
+  font-size: 24px;
+  line-height: 1;
   -webkit-transition: 0.7s ease;
   transition: 0.7s ease;
 }
 
-.nav-social svg:hover path,
-.nav-social svg:hover circle {
-  fill: #F02A2F;
+.nav-social a:hover {
+  color: #F02A2F;
   -webkit-transform: translate3d(0, -3px, 0);
           transform: translate3d(0, -3px, 0);
 }
