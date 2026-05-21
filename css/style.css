@@ -90,9 +90,9 @@ p {
 }
 
 .spiderman {
-  width: 150%;
-  -webkit-transform: translate3d(-170px, 0, 0);
-          transform: translate3d(-170px, 0, 0);
+  width: 125%;
+  -webkit-transform: translate3d(-100px, 0, 0);
+          transform: translate3d(-100px, 0, 0);
 }
 
 @media screen and (max-width: 960px) {
@@ -242,6 +242,8 @@ p {
 header {
   width: 100%;
   padding-top: 16px;
+  position: relative;
+  z-index: 10;
 }
 
 .navbar {
@@ -280,6 +282,7 @@ header {
 
 .nav-list li {
   margin-left: 24px;
+  position: relative;
 }
 
 @media screen and (max-width: 960px) {
@@ -293,7 +296,7 @@ header {
 }
 
 .nav-link {
-  display: inline-block;
+  display: block;
   font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -303,6 +306,7 @@ header {
   -webkit-transition: 0.7s ease;
   transition: 0.7s ease;
   position: relative;
+  z-index: 1;
 }
 
 .nav-link::after {
@@ -315,6 +319,7 @@ header {
   height: 0px;
   -webkit-transition: 0.7s ease;
   transition: 0.7s ease;
+  pointer-events: none;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(233, 29, 34, 0)), to(#e91d22));
   background: linear-gradient(180deg, rgba(233, 29, 34, 0) 0%, #e91d22 100%);
 }

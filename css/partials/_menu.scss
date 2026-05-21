@@ -1,6 +1,8 @@
 header {
   width: 100%;
   padding-top: 16px;
+  position: relative;
+  z-index: 10;
 }
 
 .navbar {
@@ -25,6 +27,7 @@ header {
 
   li {
     margin-left: 24px;
+    position: relative;
   }
 
   @include responsive() {
@@ -37,7 +40,7 @@ header {
 }
 
 .nav-link {
-  display: inline-block;
+  display: block;
 
   font-size: 14px;
   letter-spacing: 2px;
@@ -50,6 +53,7 @@ header {
   transition: 0.7s ease;
 
   position: relative;
+  z-index: 1;
 
   &::after {
     content: "";
@@ -61,6 +65,7 @@ header {
     width: 2px;
     height: 0px;
     transition: 0.7s ease;
+    pointer-events: none;
 
     background: linear-gradient(180deg, rgba(233, 29, 34, 0) 0%, #e91d22 100%);
   }
