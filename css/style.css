@@ -3,12 +3,12 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Mukta", sans-serif;
 }
 
 body {
   width: 100%;
   height: 100vh;
+  font-family: "Mukta", sans-serif;
   background: #0A0C10;
   overflow: hidden;
 }
