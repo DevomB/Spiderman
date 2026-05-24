@@ -19,6 +19,13 @@ body {
   background: $blue-dark;
   
   overflow: hidden;
+
+  @include responsive() {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }
 
 img, svg {

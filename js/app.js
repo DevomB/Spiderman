@@ -1,4 +1,44 @@
+function playBackgroundVideo() {
+  const video = document.querySelector(".bg-video .video");
+  if (!video) return;
+
+  video.muted = true;
+  video.defaultMuted = true;
+  video.playsInline = true;
+  video.setAttribute("playsinline", "");
+  video.setAttribute("webkit-playsinline", "");
+
+  const playPromise = video.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {});
+  }
+}
+
+function initBackgroundVideo() {
+  const video = document.querySelector(".bg-video .video");
+  if (!video) return;
+
+  playBackgroundVideo();
+
+  video.addEventListener("loadeddata", playBackgroundVideo, { once: true });
+  video.addEventListener("canplay", playBackgroundVideo, { once: true });
+
+  const unlockOnGesture = () => {
+    playBackgroundVideo();
+    document.removeEventListener("touchstart", unlockOnGesture);
+    document.removeEventListener("click", unlockOnGesture);
+  };
+
+  document.addEventListener("touchstart", unlockOnGesture, {
+    once: true,
+    passive: true,
+  });
+  document.addEventListener("click", unlockOnGesture, { once: true });
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  initBackgroundVideo();
+
   let timeline = new TimelineMax();
 
   timeline
@@ -12,7 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
       ".bg-video",
       2,
       { width: "0%", opacity: 0 },
-      { width: "100%", opacity: 1, ease: Expo.easeInOut },
+      {
+        width: "100%",
+        opacity: 1,
+        ease: Expo.easeInOut,
+        onComplete: playBackgroundVideo,
+      },
       "-=1"
     )
     .fromTo(

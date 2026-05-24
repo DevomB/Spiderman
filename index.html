@@ -59,13 +59,13 @@
       <nav class="navbar">
         <div class="nav-menu">
           <div class="logo">
-            <a href="" aria-label="Spiderman Logo">
+            <a href="https://devomb.com" aria-label="Home — Devomb">
               <img src="svg/logo-spiderman.svg" onload="SVGInject(this)" />
             </a>
           </div>
           <ul class="nav-list">
             <li><a href="https://devomb.com" class="nav-link">Home</a></li>
-            <li>
+            <li class="nav-item-desktop-only">
               <a
                 href="https://github.com/DevomB"
                 class="nav-link"
@@ -97,15 +97,20 @@
             <i class="fa-brands fa-instagram" aria-hidden="true"></i>
           </a>
         </div>
-        <input id="hamburguer" type="checkbox" style="display: none;" />
-        <label class="hamburguer-label" for="hamburguer"><div class="hamburguer mr-1"></div></label>
       </nav>
     </header>
 
     <!-- BG VIDEO -->
 
     <section class="bg-video">
-      <video class="video" autoplay muted loop>
+      <video
+        class="video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      >
         <source src="video/spiderman2.mp4" type="video/mp4" />
       </video>
     </section>

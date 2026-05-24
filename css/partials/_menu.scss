@@ -13,6 +13,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+}
+
+.logo a {
+  display: block;
+  transition: 0.7s ease;
+
+  &:hover {
+    opacity: 0.85;
+    transform: translate3d(0, -2px, 0);
+  }
 }
 
 .nav-menu {
@@ -32,6 +43,12 @@ header {
 
   @include responsive() {
     display: none;
+  }
+
+  .nav-item-desktop-only {
+    @include responsive() {
+      display: none;
+    }
   }
 }
 
@@ -77,6 +94,12 @@ header {
       height: 40px;
     }
   }
+
+  @include responsive() {
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 6px 8px;
+  }
 }
 
 .nav-social {
@@ -97,79 +120,25 @@ header {
     }
   }
 
-  @include responsive() {
-    display: none;
-  }
 }
 
-.hamburguer-label {
-  display: none;
-
-  @include responsive() {
-    display: block;
+@include responsive() {
+  .navbar {
+    flex-wrap: nowrap;
+    padding: 0 12px;
   }
-}
 
-.hamburguer {
-  display: none;
+  .nav-social {
+    margin-left: auto;
 
-  @include responsive() {
-    display: block;
-    width: 48px;
-    height: 48px;
-
-    border-radius: 10%;
-
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 30%;
-      left: 15%;
-
-      width: 70%;
-      height: 10%;
-
-      border-radius: 20px;
-
-      background-color: $white;
-
-      transition: 1s ease;
+    a {
+      margin-left: 10px;
+      font-size: 22px;
+      padding: 8px;
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 60%;
-      left: 45%;
-
-      width: 40%;
-      height: 10%;
-
-      border-radius: 20px;
-
-      background-color: $white;
-
-      transition: 1s ease;
+    a:first-child {
+      margin-left: 0;
     }
   }
-}
-
-#hamburguer:checked ~ label .hamburguer::after{
-  transform: rotate(225deg);
-  top: 45%;
-  left: 15%;
-
-  width: 70%;
-  height: 10%;
-}
-
-#hamburguer:checked ~ label .hamburguer::before {
-  transform: rotate(-225deg);
-  top: 45%;
-  left: 15%;
-
-  width: 70%;
-  height: 10%;
 }

@@ -13,6 +13,15 @@ body {
   overflow: hidden;
 }
 
+@media screen and (max-width: 960px) {
+  body {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
 img, svg {
   display: block;
   width: 100%;
@@ -208,6 +217,14 @@ p {
           align-items: center;
 }
 
+.bg-video video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+}
+
 .bg-video::after {
   content: "";
   width: 100%;
@@ -261,6 +278,7 @@ header {
           align-items: center;
 }
 
+
 .nav-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -293,6 +311,18 @@ header {
 
 .logo {
   max-width: 88px;
+}
+
+.logo a {
+  display: block;
+  -webkit-transition: 0.7s ease;
+  transition: 0.7s ease;
+}
+
+.logo a:hover {
+  opacity: 0.85;
+  -webkit-transform: translate3d(0, -2px, 0);
+          transform: translate3d(0, -2px, 0);
 }
 
 .nav-link {
@@ -332,6 +362,14 @@ header {
   height: 40px;
 }
 
+@media screen and (max-width: 960px) {
+  .nav-link {
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 6px 8px;
+  }
+}
+
 .nav-social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -360,75 +398,25 @@ header {
 }
 
 @media screen and (max-width: 960px) {
+  .navbar {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 0 12px;
+  }
+
   .nav-social {
-    display: none;
+    margin-left: auto;
   }
-}
 
-.hamburguer-label {
-  display: none;
-}
-
-@media screen and (max-width: 960px) {
-  .hamburguer-label {
-    display: block;
+  .nav-social a {
+    margin-left: 10px;
+    font-size: 22px;
+    padding: 8px;
   }
-}
 
-.hamburguer {
-  display: none;
-}
-
-@media screen and (max-width: 960px) {
-  .hamburguer {
-    display: block;
-    width: 48px;
-    height: 48px;
-    border-radius: 10%;
-    position: relative;
+  .nav-social a:first-child {
+    margin-left: 0;
   }
-  .hamburguer::after {
-    content: "";
-    position: absolute;
-    top: 30%;
-    left: 15%;
-    width: 70%;
-    height: 10%;
-    border-radius: 20px;
-    background-color: #EDF1F7;
-    -webkit-transition: 1s ease;
-    transition: 1s ease;
-  }
-  .hamburguer::before {
-    content: "";
-    position: absolute;
-    top: 60%;
-    left: 45%;
-    width: 40%;
-    height: 10%;
-    border-radius: 20px;
-    background-color: #EDF1F7;
-    -webkit-transition: 1s ease;
-    transition: 1s ease;
-  }
-}
-
-#hamburguer:checked ~ label .hamburguer::after {
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
-  top: 45%;
-  left: 15%;
-  width: 70%;
-  height: 10%;
-}
-
-#hamburguer:checked ~ label .hamburguer::before {
-  -webkit-transform: rotate(-225deg);
-          transform: rotate(-225deg);
-  top: 45%;
-  left: 15%;
-  width: 70%;
-  height: 10%;
 }
 
 .logo-spiderman {
